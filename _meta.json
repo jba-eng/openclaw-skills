@@ -1,0 +1,21 @@
+{
+  "slug": "spec-creation",
+  "version": "1.0.0",
+  "author": "Jonathan",
+  "homepage": "https://github.com/yourusername/openclaw-skills",
+  "repository": "https://github.com/yourusername/openclaw-skills",
+  "license": "MIT",
+  "keywords": [
+    "specification",
+    "requirements",
+    "design",
+    "documentation",
+    "planning",
+    "software-engineering"
+  ],
+  "requires": {
+    "python": ">=3.7",
+    "bins": []
+  },
+  "os": ["linux", "darwin", "win32"]
+}

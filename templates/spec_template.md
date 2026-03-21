@@ -1,0 +1,65 @@
+# {FEATURE_NAME} Specification
+
+## Context
+
+{DETAILED_PROBLEM_STATEMENT}
+
+**Impact**: {WHAT_HAPPENS_WHEN_IT_FAILS}
+
+**Current State**: {HOW_THINGS_WORK_NOW}
+
+## Users
+
+### {USER_ROLE_1}
+
+{DETAILED_DESCRIPTION}
+
+**Devices**: {DEVICES_USED}
+**Location**: {WHERE_THEY_WORK}
+**Frequency**: {HOW_OFTEN_THEY_USE_IT}
+
+### {USER_ROLE_2}
+
+{DETAILED_DESCRIPTION}
+
+## Requirements
+
+- **R1**: {SPECIFIC_MEASURABLE_REQUIREMENT}
+- **R2**: {SPECIFIC_MEASURABLE_REQUIREMENT}
+- **R3**: {SPECIFIC_MEASURABLE_REQUIREMENT}
+
+## Acceptance Criteria
+
+### R1
+
+- **AC1**: {EXACT_TEST_OR_VERIFICATION}
+- **AC2**: {EXACT_TEST_OR_VERIFICATION}
+- **AC3**: {EXACT_TEST_OR_VERIFICATION}
+
+### R2
+
+- **AC1**: {EXACT_TEST_OR_VERIFICATION}
+- **AC2**: {EXACT_TEST_OR_VERIFICATION}
+
+### R3
+
+- **AC1**: {EXACT_TEST_OR_VERIFICATION}
+- **AC2**: {EXACT_TEST_OR_VERIFICATION}
+
+## Edge Cases
+
+- {EDGE_CASE_1}
+- {EDGE_CASE_2}
+
+## Error Handling
+
+- {ERROR_SCENARIO_1}: {HOW_TO_HANDLE}
+- {ERROR_SCENARIO_2}: {HOW_TO_HANDLE}
+
+## Performance Targets
+
+- {METRIC_1}: {TARGET_VALUE}
+- {METRIC_2}: {TARGET_VALUE}
+
+---
+*Created: {DATE}*
