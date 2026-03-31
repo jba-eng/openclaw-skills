@@ -1,0 +1,16 @@
+{
+  "name": "Autocoder",
+  "slug": "autocoder",
+  "version": "1.0.0",
+  "description": "Autonomous coding orchestrator for active projects",
+  "author": "Jonathan (OpenClaw)",
+  "license": "MIT",
+  "requires": {
+    "bins": ["python3"],
+    "skills": ["spec-coding"]
+  },
+  "os": ["linux", "darwin", "win32"],
+  "keywords": ["automation", "autonomous", "coding", "orchestrator", "specs"],
+  "created": "2026-03-23",
+  "updated": "2026-03-23"
+}

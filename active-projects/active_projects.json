@@ -1,0 +1,12 @@
+{
+  "active_projects": [],
+  "last_check": "2026-03-27T12:08:44.031279",
+  "settings": {
+    "check_interval_minutes": 30,
+    "max_tasks_per_run": 2,
+    "auto_mark_complete": true,
+    "validate_tasks": true,
+    "check_dependencies": true,
+    "create_quality_files": true
+  }
+}

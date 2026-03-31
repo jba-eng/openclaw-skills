@@ -1,14 +1,29 @@
 ---
 name: Spec Creation
 slug: spec-creation
-version: 1.0.0
-description: Create comprehensive software specifications with automated discovery, validation, and structured 6-stage workflow.
+version: 2.0.0
+description: Create comprehensive software specifications with automated discovery, validation, and structured 6-stage workflow. Creates specs.md, design.md, tasks.md in project folder.
 metadata: {"requires":{"bins":["python3"]},"os":["linux","darwin","win32"]}
 ---
 
 ## When to Use
 
-User wants to create or update software specifications (spec.md, design.md, tasks.md) for a project.
+User wants to create or update software specifications (specs.md, design.md, tasks.md) for a project in `workspace/software-projects/`.
+
+## File Locations
+
+**Important**: All files are created IN the project folder:
+
+```
+workspace/software-projects/{PROJECT}/
+├── specs.md          ← Requirements (created by this skill)
+├── design.md         ← Architecture (created by this skill)
+├── tasks.md          ← Task queue (created by this skill)
+├── src/
+└── tests/
+```
+
+NOT in workspace root!
 
 ## Python Utilities (Token Efficient)
 
@@ -70,7 +85,29 @@ Show full spec.md. Get approval or iterate on changes.
 Use templates. Show before writing.
 
 **design.md**: Components, data flow, interfaces
+
 **tasks.md**: T1, T2, T3... with status, dependencies, done_when
+
+**Task format** (for use with autocoder):
+```markdown
+### T1: Project Structure & Dependencies
+**Status:** planned
+**Dependencies:** None
+**Done When:**
+1. Project directory structure created
+2. requirements.txt with all dependencies
+3. config.yaml template created
+
+### T2: PDF Parser Implementation
+**Status:** planned
+**Dependencies:** T1
+**Done When:**
+1. PDF text extraction working
+2. Metadata extraction working
+3. Tests passing
+```
+
+**Status values**: `planned`, `in-progress`, `blocked`, `done`, `failed`
 
 ### 7. VALIDATE & FINALIZE
 ```bash
@@ -97,17 +134,26 @@ If yes, activate spec-coding skill for task execution.
 5. **Validate quality** - Every requirement needs 2-3 testable acceptance criteria
 6. **User approval required** - At spec.md stage and final stage
 7. **Comprehensive specs** - 300-800 lines is normal and expected
+8. **Task status format** - Use checkbox format: `[ ]` pending, `[x]` done, `[!]` failed
 
 ## Data Storage
 
-Creates files in: `{PROJECT_PATH}/.specifications/`
-- spec.md
+Creates files in: `workspace/software-projects/{PROJECT}/`
+- specs.md
 - design.md
 - tasks.md
 
 Always ask user before creating or modifying files.
 
+## Integration with Autocoder
+
+After creating specifications:
+1. Add project to active-projects skill
+2. Autocoder will pick it up at 1:00 AM
+3. Tasks will be executed overnight
+
 ## Related Skills
 
 - **spec-coding**: Execute tasks from tasks.md (next step after spec creation)
-
+- **autocoder**: Overnight orchestrator that drives spec-coding via cron jobs
+- **active-projects**: Add project to active list for overnight execution
