@@ -1,0 +1,22 @@
+{
+  "name": "remoteok-stealth-scraper",
+  "version": "1.0.0",
+  "description": "Stealth scraper for RemoteOK AI Engineer jobs",
+  "main": "src/scraper.ts",
+  "scripts": {
+    "scrape": "ts-node src/scraper.ts",
+    "build": "tsc",
+    "test": "ts-node src/test_tsnode.ts"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["scraping", "stealth", "remoteok", "jobs", "ai", "playwright"],
+  "author": "OpenClaw",
+  "license": "MIT"
+}
